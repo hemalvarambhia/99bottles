@@ -29,6 +29,6 @@ class Bottles
   def line_three number
     return "\n" if number == 0
 
-    "#{bottles_of_beer number - 1} on the wall.\n" if number >= 1
+    "#{bottles_of_beer number - 1} on the wall.\n"
   end
 end
