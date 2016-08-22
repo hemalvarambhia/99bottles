@@ -1,8 +1,17 @@
 class Bottles
   def verse number
-    container = number - 1 == 1 ? 'bottle' : 'bottles'
-    "#{number} bottles of beer on the wall, #{number} bottles of beer.\n" +
+    "#{bottles_of_beer number} on the wall, #{bottles_of_beer number}.\n" +
     "Take one down and pass it around, " +  
-    "#{number - 1} #{container} of beer on the wall.\n"
+    "#{bottles_of_beer number - 1} on the wall.\n"
+  end
+
+  private
+  
+  def bottles_of_beer number
+    if number == 1
+      "#{number} bottle of beer"
+    else
+      "#{number} bottles of beer"
+    end
   end
 end
