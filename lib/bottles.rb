@@ -18,20 +18,17 @@ class Bottles
   end
 
   def line_two number
+    if number == 0
+      return "Go to the store and buy some more, #{bottles_of_beer 99} on the wall."
+    end
+
     subject = number == 1 ? 'it' : 'one'
-    line_two = 
-      if number == 0
-        'Go to the store and buy some more, 99 bottles of beer on the wall.'
-      else
-        "Take #{subject} down and pass it around, "
-      end
+    "Take #{subject} down and pass it around, "
   end
 
   def line_three number
-    if number >= 1
-      "#{bottles_of_beer number - 1} on the wall.\n"
-    else
-      "\n"
-    end
+    return "\n" if number == 0
+
+    "#{bottles_of_beer number - 1} on the wall.\n" if number >= 1
   end
 end
