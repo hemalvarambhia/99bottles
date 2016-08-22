@@ -1,4 +1,8 @@
 class Bottles
+  def verses start, finish
+    verse(start) + "\n" + verse(finish)
+  end
+
   def verse number
     [ 
       "#{bottles_of_beer(number).capitalize} on the wall, #{bottles_of_beer number}.\n",
