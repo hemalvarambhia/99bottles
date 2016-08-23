@@ -5,9 +5,10 @@ class Bottles
 
   def verse number
     [ 
-      "#{bottles_of_beer(number).capitalize} on the wall, #{bottles_of_beer number}.\n",
-      line_two(number)
-    ].join
+      "#{bottles_of_beer(number).capitalize} on the wall, #{bottles_of_beer number}.",
+      line_two(number),
+      ''
+    ].join("\n")
   end
 
   private
@@ -22,10 +23,10 @@ class Bottles
 
   def line_two number
     if number == 0
-      return "Go to the store and buy some more, #{bottles_of_beer 99} on the wall.\n"
+      return "Go to the store and buy some more, #{bottles_of_beer 99} on the wall."
     end
 
     subject = number == 1 ? 'it' : 'one'
-    "Take #{subject} down and pass it around, #{bottles_of_beer number - 1} on the wall.\n"
+    "Take #{subject} down and pass it around, #{bottles_of_beer number - 1} on the wall."
   end
 end
