@@ -26,14 +26,6 @@ class Bottles
     end
 
     private
-  
-    def bottles_of_beer number
-      return "#{number} bottle of beer" if number == 1
-      return 'no more bottles of beer' if number == 0
-      return '99 bottles of beer' if number < 0
-
-      "#{number} bottles of beer"
-    end
 
     def line_one
       "#{bottles_of_beer(@number).capitalize} on the wall, #{bottles_of_beer @number}."
@@ -50,6 +42,14 @@ class Bottles
 
     def line_three
       ''
+    end
+
+    def bottles_of_beer number
+      return "#{number} bottle of beer" if number == 1
+      return 'no more bottles of beer' if number == 0
+      return '99 bottles of beer' if number < 0
+
+      "#{number} bottles of beer"
     end
   end
 end
