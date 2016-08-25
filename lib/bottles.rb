@@ -20,11 +20,10 @@ class Bottles
   class Verse
     def initialize number
       @number = number
-      @lines = [ line_one, line_two, line_three ]
     end
 
     def to_s
-      @lines.join "\n"
+      [ line_one, line_two, line_three ].join "\n"
     end
 
     private
