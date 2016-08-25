@@ -7,8 +7,7 @@ class Bottles
     from = [start, finish].min
     to = [start, finish].max
 
-    verses = 
-      (from..to).map { |number| verse number }.reverse.join "\n"
+    (from..to).map { |number| verse number }.reverse.join "\n"
   end
 
   def verse number
