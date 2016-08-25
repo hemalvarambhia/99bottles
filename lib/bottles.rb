@@ -1,4 +1,8 @@
 class Bottles
+  def song
+    verses 99, 0
+  end
+
   def verses start, finish
     from = [start, finish].min
     to = [start, finish].max
