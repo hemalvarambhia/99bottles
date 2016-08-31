@@ -18,7 +18,7 @@ class Bottles
 
   class Verse
     def initialize number
-      @number = number
+      @number_of_bottles = number
     end
 
     def to_s
@@ -28,16 +28,18 @@ class Bottles
     private
 
     def line_one
-      "#{bottles_of_beer(@number).capitalize} on the wall, #{bottles_of_beer @number}."
+      "#{bottles_of_beer(@number_of_bottles).capitalize} on the wall, " +
+        "#{bottles_of_beer @number_of_bottles}."
     end
 
     def line_two
-      if @number == 0
+      if @number_of_bottles == 0
         return "Go to the store and buy some more, #{bottles_of_beer 99} on the wall."
       end
 
-      subject = @number == 1 ? 'it' : 'one'
-      "Take #{subject} down and pass it around, #{bottles_of_beer @number - 1} on the wall."
+      subject = @number_of_bottles == 1 ? 'it' : 'one'
+      "Take #{subject} down and pass it around, " +
+        "#{bottles_of_beer @number_of_bottles - 1} on the wall."
     end
 
     def line_three
