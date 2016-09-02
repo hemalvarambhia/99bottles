@@ -47,11 +47,12 @@ class Bottles
     end
 
     def bottles_of_beer number
-      return "#{number} bottle of beer" if number == 1
-      return 'no more bottles of beer' if number == 0
-      return '99 bottles of beer' if number < 0
+      bottles = "#{number} bottles" if number > 1
+      bottles =  "1 bottle" if number == 1
+      bottles =  'no more bottles' if number == 0
+      bottles = '99 bottles' if number < 0
 
-      "#{number} bottles of beer"
+      "#{bottles} of beer"
     end
   end
 end
