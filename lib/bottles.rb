@@ -34,7 +34,8 @@ class Bottles
 
     def line_two
       if @number_of_bottles == 0
-        return "Go to the store and buy some more, #{bottles_of_beer 99} on the wall."
+        return "Go to the store and buy some more, " + 
+          "#{bottles_of_beer 99} on the wall."
       end
 
       subject = @number_of_bottles == 1 ? 'it' : 'one'
@@ -50,7 +51,6 @@ class Bottles
       bottles = "#{number} bottles" if number > 1
       bottles =  "1 bottle" if number == 1
       bottles =  'no more bottles' if number == 0
-      bottles = '99 bottles' if number < 0
 
       "#{bottles} of beer"
     end
