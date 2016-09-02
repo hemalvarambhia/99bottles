@@ -38,13 +38,16 @@ class Bottles
           "#{bottles_of_beer 99} on the wall."
       end
 
-      subject = @number_of_bottles == 1 ? 'it' : 'one'
       "Take #{subject} down and pass it around, " +
         "#{bottles_of_beer @number_of_bottles - 1} on the wall."
     end
 
     def line_three
       ''
+    end
+
+    def subject
+      @number_of_bottles == 1 ? 'it' : 'one'
     end
 
     def bottles_of_beer number
