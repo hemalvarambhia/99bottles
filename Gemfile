@@ -1,2 +1,8 @@
 source 'https://rubygems.org'
-gem 'minitest', '~> 5.4'
+group :test do
+  gem 'minitest', '~> 5.4'
+end
+
+group :development do
+  gem 'flog'
+end
